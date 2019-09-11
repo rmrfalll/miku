@@ -23,7 +23,7 @@ do
 echo -e "\033[32m欢迎使用多功能脚本,请输入序号选择功能\033[0m"
 echo -e "\033[32m当前版本为:0.08\033[0m" 
 echo 1.tar备份恢复系统
-echo 2.安装SSR多用户管理系统
+echo 2.科学上网工具集合
 echo 3.安装V2RAY
 echo 4.开启BBR加速
 echo 5.安装rclone
@@ -48,16 +48,7 @@ then
 		echo $(date)" 删除原来的备份一次" >> /root/backuplog.txt
 		tar -cvpzf /back/backup.tgz --exclude=/proc --exclude=/lost+found --exclude=/home --exclude=/mnt --exclude=/sys --exclude=/media  --exclude=/back --exclude=/dev --exclude=/etc/default/grub --exclude=/etc/grub.d/ --exclude=/etc/group --exclude=/etc/group- --exclude=/boot /
 		echo $(date) "备份一次" >> /root/backuplog.txt
-		echo -e "\033[32m备份完成!输入y上传云盘\(默认不上传\)\033[0m"
-		read m2
-		if [ "$m2" == "y" ]
-		then
-		rclone delete gdrive3:/gcpbackup/
-		echo $(date) "删除云盘备份一次" >> /root/backuplog.txt
-		rclone copy /back/backup.tgz gdrive3:/gcpbackup/ -P
-		echo $(date) "上传到云盘一次" >> /root/backuplog.txt
-		echo -e "\033[32m上传云盘成功!\033[0m"
-		fi
+		echo -e "\033[32m备份完成!备份压缩包在\/back文件夹\033[0m"
 	elif	[ "$m2" == 2 ]
 	then
 		if [ -f "/back/backup.tgz" ]
@@ -83,7 +74,32 @@ then
 	done
 elif	[ "$m1" == 2 ]
 then
-	wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh
+	while true
+	do
+	echo 1.安装SSR多用户管理系统
+	echo 2.安装V2RAY
+	echo 3.
+	echo 4.返回上级菜单
+	read -p ">>" m2
+	if [ "$m2" == 1 ]
+	then
+		wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh
+	elif	[ "$m2" == 2 ]
+	then
+		bash <(curl -s -L https://git.io/v2ray.sh)	
+	elif	[ "$m2" == 3 ]
+	then	
+		
+	elif	[ "$m2" == 4 ]
+	then
+		break
+	else	
+		echo -e "\033[32m输入错误\033[0m"
+		
+	fi
+	done	
+	
+	
 elif	[ "$m1" == 3 ]
 then
 	bash <(curl -s -L https://git.io/v2ray.sh)

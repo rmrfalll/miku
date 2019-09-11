@@ -29,7 +29,7 @@ fi
 while true
 do
 echo -e "\033[32m欢迎使用多功能脚本,请输入序号选择功能\033[0m"
-echo -e "\033[32m当前版本为:0.32\033[0m" 
+echo -e "\033[32m当前版本为:0.33\033[0m" 
 echo 1.科学上网脚本集合
 echo 2.各种工具脚本集合
 echo 3.系统优化脚本集合
@@ -166,12 +166,13 @@ then
 	rm -rf /root/miku.sh
 	wget -N https://raw.githubusercontent.com/rmrfalll/miku/master/miku.sh
 	chmod -R 0777 /root/miku.sh 
-	echo -e "\033[32m更新完成!请重新执行.\/miku.sh!\033[0m"
+	echo -e "\033[32m更新完成!请重新执行./miku.sh!\033[0m"
+	exit
 	
 elif	[ "$m1" == 0 ]
 then
 	
-	echo -e "\033[32m退出完成,执行.\/miku.sh再次打开本脚本\033[0m"	
+	echo -e "\033[32m退出完成,执行./miku.sh再次打开本脚本\033[0m"	
 	break
 elif	[ "$m1" == 6 ]
 then

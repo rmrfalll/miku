@@ -6,13 +6,13 @@ else
 	echo -e "\033[32m请用root用户执行本脚本!\033[0m"
         exit
 fi
-#if [ -f "/root/miku_up.sh" ]
-#then
-#	chmod -R 0777 /root/miku_up.sh
-#else
-#	wget -q https://raw.githubusercontent.com/rmrfalll/miku/master/miku_up.sh
-#	chmod -R 0777 /root/miku_up.sh
-#fi
+if [ -f "/root/miku_up.sh" ]
+then
+	chmod -R 0777 /root/miku_up.sh
+else
+	wget -q https://raw.githubusercontent.com/rmrfalll/miku/master/miku_up.sh
+	chmod -R 0777 /root/miku_up.sh
+fi
 #if [ -f "/root/miku.sh" ]
 #then
 #    if [ -f "/usr/local/sbin/miku" ]
@@ -29,7 +29,7 @@ fi
 while true
 do
 echo -e "\033[32m欢迎使用多功能脚本,请输入序号选择功能\033[0m"
-echo -e "\033[32m当前版本为:0.34\033[0m" 
+echo -e "\033[32m当前版本为:0.3\5033[0m" 
 echo 1.科学上网脚本集合
 echo 2.各种工具脚本集合
 echo 3.系统优化脚本集合

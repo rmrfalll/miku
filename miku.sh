@@ -21,7 +21,7 @@ fi
 while true
 do
 echo -e "\033[32m欢迎使用多功能脚本,请输入序号选择功能\033[0m"
-echo -e "\033[32m当前版本为:0.10\033[0m" 
+echo -e "\033[32m当前版本为:0.11\033[0m" 
 echo 1.tar备份恢复系统
 echo 2.科学上网工具集合
 echo 3.安装V2RAY
@@ -39,7 +39,7 @@ then
 	echo 1.tar打包备份系统
 	echo 2.本地压缩包恢复系统
 	echo 3.云端下载压缩包恢复系统
-	echo 4.返回上级菜单
+	echo 0.返回上级菜单
 	read -p ">>" m2
 	if [ "$m2" == 1 ]
 	then
@@ -68,7 +68,7 @@ then
 		wget -c -N   $m3 -O backup.tgz
 		mv -i /root/backup.tgz /back
 		echo "下载完成"
-	elif	[ "$m2" == 4 ]
+	elif	[ "$m2" == 0 ]
 	then
 		break
 	else	

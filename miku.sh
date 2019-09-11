@@ -151,14 +151,9 @@ elif	[ "$m1" == 4 ]
 then
 	read -p "请输入要计算圆周率的小数点后的位数:" pi
 	time echo "scale=$pi; a(1)*4" | bc -l
-elif	[ "$m1" == 6 ]
+elif	[ "$m1" == 5 ]
 then
-	#rm -rf /root/miku.sh
-	#rm -rf /usr/local/sbin/miku
-	#wget -N  https://raw.githubusercontent.com/rmrfalll/miku/master/miku.sh
-	#chmod -R 0777 /root/miku.sh
-	#mv -u /root/miku.sh /usr/local/sbin/miku
-	echo -e "\033[32m请先执行\n"rm -rf \/root\/miku.sh\&\&rm -rf \/usr\/local\/sbin\/miku"\n"然后重新登陆ssh再执行"\n"wget -N https:\/\/raw.githubusercontent.com\/rmrfalll\/miku\/master\/miku.sh\&\&chmod -R 0777 \/root\/miku.sh \&\&bash miku.sh"\n\033[0m"
+	
 	exit
 elif	[ "$m1" == 0 ]
 then

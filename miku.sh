@@ -29,7 +29,7 @@ fi
 while true
 do
 echo -e "\033[32m欢迎使用多功能脚本,请输入序号选择功能\033[0m"
-echo -e "\033[32m当前版本为:0.30\033[0m" 
+echo -e "\033[32m当前版本为:0.31\033[0m" 
 echo 1.科学上网脚本集合
 echo 2.各种工具脚本集合
 echo 3.系统优化脚本集合
@@ -162,6 +162,7 @@ elif	[ "$m1" == 5 ]
 then
 	#exec /root/miku_up.sh
 	echo -e "\033[32m请先执行\n"rm -rf \/root\/miku.sh\&\&rm -rf \/usr\/local\/sbin\/miku"\n"然后重新登陆ssh再执行"\n"wget -N https:\/\/raw.githubusercontent.com\/rmrfalll\/miku\/master\/miku.sh\&\&chmod -R 0777 \/root\/miku.sh \&\&bash miku.sh"\n\033[0m"
+	exit
 elif	[ "$m1" == 0 ]
 then
 	

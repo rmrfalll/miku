@@ -6,13 +6,13 @@ else
 	echo -e "\033[32m请用root用户执行本脚本!\033[0m"
         exit
 fi
-if [ -f "/root/miku_up.sh" ]
-then
-	chmod -R 0777 /root/miku_up.sh
-else
-	wget -q https://raw.githubusercontent.com/rmrfalll/miku/master/miku_up.sh
-	chmod -R 0777 /root/miku_up.sh
-fi
+#if [ -f "/root/miku_up.sh" ]
+#then
+#	chmod -R 0777 /root/miku_up.sh
+#else
+#	wget -q https://raw.githubusercontent.com/rmrfalll/miku/master/miku_up.sh
+#	chmod -R 0777 /root/miku_up.sh
+#fi
 #if [ -f "/root/miku.sh" ]
 #then
 #    if [ -f "/usr/local/sbin/miku" ]
@@ -160,8 +160,8 @@ then
 	time echo "scale=$pi; a(1)*4" | bc -l
 elif	[ "$m1" == 5 ]
 then
-	exec /root/miku_up.sh
-	#echo -e "\033[32m请先执行\n"rm -rf \/root\/miku.sh\&\&rm -rf \/usr\/local\/sbin\/miku"\n"然后重新登陆ssh再执行"\n"wget -N https:\/\/raw.githubusercontent.com\/rmrfalll\/miku\/master\/miku.sh\&\&chmod -R 0777 \/root\/miku.sh \&\&bash miku.sh"\n\033[0m"
+	#exec /root/miku_up.sh
+	echo -e "\033[32m请先执行\n"rm -rf \/root\/miku.sh"\n"然后重新登陆ssh再执行"\n"wget -N https:\/\/raw.githubusercontent.com\/rmrfalll\/miku\/master\/miku.sh\&\&chmod -R 0777 \/root\/miku.sh \&\&bash miku.sh"\n\033[0m"
 	#exit
 	#rm -rf /root/miku.sh
 	#wget -N https://raw.githubusercontent.com/rmrfalll/miku/master/miku.sh

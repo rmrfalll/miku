@@ -167,7 +167,7 @@ then
 	wget -N https://raw.githubusercontent.com/rmrfalll/miku/master/miku.sh
 	chmod -R 0777 /root/miku.sh 
 	echo -e "\033[32m更新完成!请重新执行./miku.sh!\033[0m"
-	exit
+	break
 	
 elif	[ "$m1" == 0 ]
 then

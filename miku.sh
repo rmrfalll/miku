@@ -165,7 +165,7 @@ then
 	#wget -N  https://raw.githubusercontent.com/rmrfalll/miku/master/miku.sh
 	#chmod -R 0777 /root/miku.sh
 	#mv -u /root/miku.sh /usr/local/sbin/miku
-	echo -e "\033[32m请依次执行\n "rm -rf \/root\/miku.sh\n rm -rf \/usr\/local\/sbin\/miku \n 然后重新登陆ssh再执行 \n wget -N https:\/\/raw.githubusercontent.com\/rmrfalll\/miku\/master\/miku.sh\&\& chmod -R 0777 \/root\/miku.sh \&\& bash miku.sh"\n更新脚本\033[0m"
+	echo -e "\033[32m请先执行\n "rm -rf \/root\/miku.sh\&\&rm -rf \/usr\/local\/sbin\/miku"\n "然后重新登陆ssh再执行" \n "wget -N https:\/\/raw.githubusercontent.com\/rmrfalll\/miku\/master\/miku.sh\&\& chmod -R 0777 \/root\/miku.sh \&\& bash miku.sh"\n更新脚本\033[0m"
 	exit
 elif	[ "$m1" == 0 ]
 then

@@ -21,7 +21,7 @@ fi
 while true
 do
 echo -e "\033[32m欢迎使用多功能脚本,请输入序号选择功能\033[0m"
-echo -e "\033[32m当前版本为:0.08\033[0m" 
+echo -e "\033[32m当前版本为:0.09\033[0m" 
 echo 1.tar备份恢复系统
 echo 2.科学上网工具集合
 echo 3.安装V2RAY
@@ -78,8 +78,12 @@ then
 	do
 	echo 1.安装SSR多用户管理系统
 	echo 2.安装V2RAY
-	echo 3.
-	echo 4.返回上级菜单
+	echo 3.brook一键安装脚本
+	echo 4.goflyway一键安装脚本
+	echo 5.lightsocks一键安装脚本
+	echo 6.daze一键安装脚本
+	echo 7.mtproxy一键安装脚本
+	echo 0.返回上级菜单
 	read -p ">>" m2
 	if [ "$m2" == 1 ]
 	then
@@ -89,10 +93,22 @@ then
 		bash <(curl -s -L https://git.io/v2ray.sh)	
 	elif	[ "$m2" == 3 ]
 	then	
-		
-	elif	[ "$m2" == 4 ]
+		wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/brook.sh && chmod +x brook.sh && bash brook.sh
+	elif	[ "$m2" == 0 ]
 	then
 		break
+	elif	[ "$m2" == 4 ]
+	then
+		wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/goflyway.sh && chmod +x goflyway.sh && bash goflyway.sh
+	elif	[ "$m2" == 5 ]
+	then
+		wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/lightsocks.sh && chmod +x lightsocks.sh && bash lightsocks.sh	
+	elif	[ "$m2" == 6 ]
+	then
+		wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/daze.sh && chmod +x daze.sh && bash daze.sh
+	elif	[ "$m2" == 7 ]
+	then
+		wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/mtproxy.sh && chmod +x mtproxy.sh && bash mtproxy.sh
 	else	
 		echo -e "\033[32m输入错误\033[0m"
 		

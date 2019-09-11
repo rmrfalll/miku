@@ -60,7 +60,7 @@ then
 		fi
 	elif	[ "$m2" == 3 ]
 	then	
-		mkdir -p /back
+		mkdir -p /back >> /dev/null 
 		read -p "请输入云端备份压缩包下载链接>>" m3
 		wget -c -N   $m3 -O backup.tgz
 		mv -i /root/backup.tgz /back

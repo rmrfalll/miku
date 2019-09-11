@@ -54,10 +54,11 @@ then
 		if [ -f "/back/backup.tgz" ]
 		then
    		 	tar xvpfz /back/backup.tgz -C /
-			echo 恢复系统完成!重启系统生效!
+			echo -e "\033[32m恢复系统完成!重启系统生效!\033[0m"
 			break
 		else
     			echo "本地/back文件夹没有backup.tgz压缩包!"
+			
 		fi
 	elif	[ "$m2" == 3 ]
 	then	
@@ -65,7 +66,7 @@ then
 		read -p "请输入云端备份压缩包下载链接>>" m3
 		wget -c -N   $m3 -O backup.tgz
 		mv -i /root/backup.tgz /back
-		echo "下载完成!请返回第2步进行本地压缩包恢复"
+		echo -e "\033[32m下载完成!请返回第2步进行本地压缩包恢复\033[0m"
 	elif	[ "$m2" == 0 ]
 	then
 		break

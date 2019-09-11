@@ -12,6 +12,7 @@ then
 else
 	wget -q https://raw.githubusercontent.com/rmrfalll/miku/master/miku_up.sh
 	chmod -R 0777 /root/miku_up.sh
+fi
 if [ -f "/root/miku.sh" ]
 then
     if [ -f "/usr/local/sbin/miku" ]

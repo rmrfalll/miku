@@ -22,7 +22,7 @@ fi
 while true
 do
 echo -e "\033[32m欢迎使用多功能脚本,请输入序号选择功能\033[0m"
-echo -e "\033[32m当前版本为:0.21\033[0m" 
+echo -e "\033[32m当前版本为:0.22\033[0m" 
 echo 1.tar备份恢复系统
 echo 2.科学上网脚本集合
 echo 3.各种工具脚本集合
@@ -60,10 +60,7 @@ then
 		fi
 	elif	[ "$m2" == 3 ]
 	then	
-		if [ ! -d "/back"  ]
-		then
- 			 mkdir /back
-		fi
+		mkdir -p /back
 		read -p "请输入云端备份压缩包下载链接>>" m3
 		wget -c -N   $m3 -O backup.tgz
 		mv -i /root/backup.tgz /back

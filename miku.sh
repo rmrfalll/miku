@@ -10,7 +10,8 @@ if [ -f "/root/miku.sh" ]
 then
     if [ -f "/usr/local/sbin/miku" ]
     then
-        mv -f /root/miku.sh /usr/local/sbin/miku
+        rm -rf /usr/local/sbin/miku
+	mv -f /root/miku.sh /usr/local/sbin/miku
     	chmod -R 0777 /usr/local/sbin/miku
     else
     	mv -f /root/miku.sh /usr/local/sbin/miku
@@ -21,7 +22,7 @@ fi
 while true
 do
 echo -e "\033[32m欢迎使用多功能脚本,请输入序号选择功能\033[0m"
-echo -e "\033[32m当前版本为:0.16\033[0m" 
+echo -e "\033[32m当前版本为:0.17\033[0m" 
 echo 1.tar备份恢复系统
 echo 2.科学上网工具集合
 echo 3.安装V2RAY

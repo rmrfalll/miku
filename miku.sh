@@ -54,7 +54,8 @@ then
 		if [ -f "/back/backup.tgz" ]
 		then
    		 	tar xvpfz /back/backup.tgz -C /
-			echo 恢复系统完成!
+			echo 恢复系统完成!重启系统生效!
+			break
 		else
     			echo "本地/back文件夹没有backup.tgz压缩包!"
 		fi

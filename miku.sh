@@ -21,7 +21,7 @@ fi
 while true
 do
 echo -e "\033[32m欢迎使用多功能脚本,请输入序号选择功能\033[0m"
-echo -e "\033[32m当前版本为:0.14\033[0m" 
+echo -e "\033[32m当前版本为:0.15\033[0m" 
 echo 1.tar备份恢复系统
 echo 2.科学上网工具集合
 echo 3.安装V2RAY
@@ -164,7 +164,8 @@ then
 	#wget -N  https://raw.githubusercontent.com/rmrfalll/miku/master/miku.sh
 	#chmod -R 0777 /root/miku.sh
 	#mv -u /root/miku.sh /usr/local/sbin/miku
-	echo -e "\033[32m请执行"wget -N https:\/\/raw.githubusercontent.com\/rmrfalll\/miku\/master\/miku.sh\&\& chmod -R 0777 \/root\/miku.sh \&\& bash miku.sh"更新脚本\033[0m"
+	echo -e "\033[32m请执行\n"rm -rf \/root\/miku.sh\&\&rm -rf /usr/local/sbin/miku\&\&wget -N https:\/\/raw.githubusercontent.com\/rmrfalll\/miku\/master\/miku.sh\&\& chmod -R 0777 \/root\/miku.sh \&\& bash miku.sh"\n更新脚本\033[0m"
+	exit
 elif	[ "$m1" == 0 ]
 then
 	

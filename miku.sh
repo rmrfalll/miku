@@ -166,10 +166,18 @@ then
 	#exec /root/miku_up.sh
 	#echo -e "\033[32m请先执行\n"rm -rf \/root\/miku.sh"\n"然后重新登陆ssh再执行"\n"wget -N https:\/\/raw.githubusercontent.com\/rmrfalll\/miku\/master\/miku.sh\&\&chmod -R 0777 \/root\/miku.sh \&\&bash miku.sh"\n\033[0m"
 	#exit
-	rm -rf /root/miku.sh
-	wget -N https://raw.githubusercontent.com/rmrfalll/miku/master/miku.sh
-	chmod -R 0777 /root/miku.sh 
-	echo -e "\033[32m更新完成!请重新执行./miku\033[0m"
+	#rm -rf /root/miku.sh
+	#wget -N https://raw.githubusercontent.com/rmrfalll/miku/master/miku.sh
+	#chmod -R 0777 /root/miku.sh 
+	#echo -e "\033[32m更新完成!请重新执行./miku\033[0m"
+	if [ -f "/root/miku_up.sh" ]
+	then
+		chmod -R 0777 /root/miku_up.sh
+	else
+		wget -q https://raw.githubusercontent.com/rmrfalll/miku/master/miku_up.sh
+		chmod -R 0777 /root/miku_up.sh
+	fi
+	exec /root/miku_up.sh
 	break
 	
 elif	[ "$m1" == 0 ]

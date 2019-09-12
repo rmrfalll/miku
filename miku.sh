@@ -177,7 +177,8 @@ then
 		wget -q https://raw.githubusercontent.com/rmrfalll/miku/master/miku_up.sh
 		chmod -R 0777 /root/miku_up.sh
 	fi
-	exec /root/miku_up.sh
+	#exec /root/miku_up.sh
+	echo -e "\033[32m请执行\n"./miku_up.sh"\n来更新脚本!\033[0m"
 	break
 	
 elif	[ "$m1" == 0 ]

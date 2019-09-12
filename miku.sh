@@ -170,15 +170,15 @@ then
 	#wget -N https://raw.githubusercontent.com/rmrfalll/miku/master/miku.sh
 	#chmod -R 0777 /root/miku.sh 
 	#echo -e "\033[32m更新完成!请重新执行./miku\033[0m"
-	if [ -f "/root/miku_up.sh" ]
+	if [ -f "/root/miupdate.sh" ]
 	then
-		chmod -R 0777 /root/miku_up.sh
+		chmod -R 0777 /root/miupdate.sh
 	else
-		wget -q https://raw.githubusercontent.com/rmrfalll/miku/master/miku_up.sh
-		chmod -R 0777 /root/miku_up.sh
+		wget -q https://raw.githubusercontent.com/rmrfalll/miku/master/miupdate.sh
+		chmod -R 0777 /root/miupdate.sh
 	fi
 	#exec /root/miku_up.sh
-	echo -e "\033[32m请执行\n"./miku_up.sh"\n来更新脚本!\033[0m"
+	echo -e "\033[32m请执行\n"./miupdate.sh"\n来更新脚本!\033[0m"
 	break
 	
 elif	[ "$m1" == 0 ]

@@ -1,4 +1,5 @@
 #!/bin/bash
+pkill -f miku
 rm -rf /root/miku.sh
 rm -rf /root/miku
 rm -rf /usr/local/sbin/miku

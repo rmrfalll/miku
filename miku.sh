@@ -109,7 +109,7 @@ then
 	elif	[ "$m2" == 4 ]
 	then	
 		wget -N https://raw.githubusercontent.com/rmrfalll/miku/master/block-ips.sh&&chmod +x block-ips.sh&&./block-ips.sh
-	elif
+	elif	[ "$m2" == 5 ]
 	then
 		wget -N https://raw.githubusercontent.com/rmrfalll/miku/master/testrace.sh&&chmod +x testrace.sh&&bash testrace.sh
 	elif	[ "$m2" == 0 ]

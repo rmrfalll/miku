@@ -32,7 +32,7 @@ fi
 while true
 do
 echo -e "\033[32m欢迎使用多功能脚本,请输入序号选择功能\033[0m"
-echo -e "\033[32m当前版本为:0.51\033[0m" 
+echo -e "\033[32m当前版本为:0.52\033[0m" 
 echo 1.科学上网脚本集合
 echo 2.各种工具脚本集合
 echo 3.系统优化脚本集合
@@ -92,6 +92,7 @@ then
 	echo 1.aria2安装脚本
 	echo 2.rclone安装脚本
 	echo 3.linux性能测试脚本\(来源www.94ish.me\)
+	echo 4.禁止指定国家ip访问vps\(来源www.94ish.me\)
 	echo 0.返回上级菜单
 	read -p ">>" m2
 	if [ "$m2" == 1 ]
@@ -103,6 +104,9 @@ then
 	elif	[ "$m2" == 3 ]
 	then	
 		wget -N --no-check-certificate https://raw.githubusercontent.com/chiakge/Linux-Server-Bench-Test/master/linuxtest.sh&&bash linuxtest.sh
+	elif	[ "$m2" == 4 ]
+	then	
+		wget https://www.moerats.com/usr/shell/block-ips.sh&&chmod +x block-ips.sh&&./block-ips.sh
 	elif	[ "$m2" == 0 ]
 	then
 		break

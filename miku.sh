@@ -32,7 +32,7 @@ fi
 while true
 do
 echo -e "\033[32m欢迎使用多功能脚本,请输入序号选择功能\033[0m"
-echo -e "\033[32m当前版本为:0.49\033[0m" 
+echo -e "\033[32m当前版本为:0.50\033[0m" 
 echo 1.科学上网脚本集合
 echo 2.各种工具脚本集合
 echo 3.系统优化脚本集合
@@ -115,7 +115,7 @@ then
 	while true
 	do
 	echo 1.安装BBR
-	#echo 2.
+	echo 2.添加\/删除swap虚拟内存\(来源:www.moerats.com\)
 	echo 0.返回上级菜单
 	read -p ">>" m2
 	if [ "$m2" == 1 ]
@@ -145,9 +145,9 @@ then
 		
 		fi
 		done
-	#elif	[ "$m2" == 2 ]	
-	#then		
-		
+	elif	[ "$m2" == 2 ]	
+	then		
+		wget -N https://raw.githubusercontent.com/rmrfalll/miku/master/swap.sh && bash swap.sh
 	elif	[ "$m2" == 0 ]
 	then
 		break

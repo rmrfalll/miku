@@ -97,7 +97,7 @@ then
 	echo 1.aria2安装脚本
 	echo 2.rclone安装脚本
 	echo 3.linux性能测试脚本\(来源www.94ish.me\)
-	echo 4.禁止指定国家ip访问vps\(来源www.moerats.me\)
+	echo 4.禁止指定国家ip访问vps\(来源www.moerats.com\)
 	echo 5.vps回程路由测试
 	echo 0.返回上级菜单
 	read -p ">>" m2

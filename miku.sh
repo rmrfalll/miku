@@ -33,7 +33,7 @@ while true
 do
 echo -e "\033[32m欢迎使用多功能脚本,请输入序号选择功能\033[0m"
 echo -e "\033[32m脚本仅支持debian/ubuntu系统!\033[0m" 
-echo -e "\033[32m当前版本为:0.54\033[0m" 
+echo -e "\033[32m当前版本为:0.55\033[0m" 
 echo 1.科学上网脚本集合
 echo 2.各种工具脚本集合
 echo 3.系统优化脚本集合
@@ -53,6 +53,7 @@ then
 	echo 5.lightsocks安装脚本
 	echo 6.daze安装脚本
 	echo 7.mtproxy安装脚本
+	echo 8.AnyConnect安装脚本
 	echo 0.返回上级菜单
 	read -p ">>" m2
 	if [ "$m2" == 1 ]
@@ -79,6 +80,9 @@ then
 	elif	[ "$m2" == 7 ]
 	then
 		wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/mtproxy.sh && chmod +x mtproxy.sh && bash mtproxy.sh
+	elif	[ "$m2" == 8 ]
+	then
+		wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/ocserv.sh && chmod +x ocserv.sh && bash ocserv.sh
 	else	
 		echo -e "\033[32m输入错误\033[0m"
 		

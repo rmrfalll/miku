@@ -33,7 +33,7 @@ while true
 do
 echo -e "\033[32m欢迎使用多功能脚本,请输入序号选择功能\033[0m"
 echo -e "\033[32m脚本仅支持debian/ubuntu系统!\033[0m" 
-echo -e "\033[32m当前版本为:0.55\033[0m" 
+echo -e "\033[32m当前版本为:0.56\033[0m" 
 echo 1.科学上网脚本集合
 echo 2.各种工具脚本集合
 echo 3.系统优化脚本集合
@@ -99,6 +99,7 @@ then
 	echo 3.linux性能测试脚本\(来源www.94ish.me\)
 	echo 4.禁止指定国家ip访问vps\(来源www.moerats.com\)
 	echo 5.vps回程路由测试
+	echo 6.网速测试
 	echo 0.返回上级菜单
 	read -p ">>" m2
 	if [ "$m2" == 1 ]
@@ -116,6 +117,9 @@ then
 	elif	[ "$m2" == 5 ]
 	then
 		wget -N https://raw.githubusercontent.com/rmrfalll/miku/master/testrace.sh&&chmod +x testrace.sh&&bash testrace.sh
+	elif	[ "$m2" == 6 ]
+	then
+		wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/ZBench/master/ZBench-CN.sh && bash ZBench-CN.sh
 	elif	[ "$m2" == 0 ]
 	then
 		break
